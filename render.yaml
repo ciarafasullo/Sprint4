@@ -1,8 +1,12 @@
 services:
   - name: scatterplot
-    buildCommand: pip install -r requirements.txt
+    buildCommand: 
+      - pip install -r requirements.txt
+      - cp data.csv .
     startCommand: python scatterplot.py
 
   - name: navbar
-    buildCommand: pip install -r requirements.txt
+    buildCommand: 
+      - pip install -r requirements.txt
+      - cp data.csv .
     startCommand: python navbar.py
