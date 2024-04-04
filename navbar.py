@@ -6,7 +6,7 @@ from dash import dcc, html, Input, Output
 
 # %%
 #read the data from the csv file
-df = pd.read_csv('data.csv')
+df = pd.read_csv('filmtv_data.csv')
 
 # %%
 #data cleaning
@@ -15,6 +15,7 @@ df = df.drop(columns = columns_to_drop)
 #drop all rows that include movies from countries outside of the United States
 df = df[df['country'] == 'United States']
 df
+df.to_csv('data.csv', index=False)
 
 # %%
 #define external stylesheet
