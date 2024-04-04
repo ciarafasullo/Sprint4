@@ -19,7 +19,7 @@ external_stylesheets = ['https://bootswatch.com/5/quartz/bootstrap.css']
 
 # %%
 #read the data from the csv file
-df = pd.read_csv('data.csv')
+df = pd.read_csv('data.csv', encoding='unicode_escape')
 
 # %%
 #data cleaning
