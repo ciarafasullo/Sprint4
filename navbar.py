@@ -9,15 +9,6 @@ from dash import dcc, html, Input, Output
 df = pd.read_csv('data.csv') #read cleaned file (original too large to render)
 
 # %%
-#data cleaning
-columns_to_drop = ['filmtv_id', 'total_votes', 'notes', 'humor', 'rhythm', 'effort', 'tension', 'erotism']
-df = df.drop(columns = columns_to_drop)
-#drop all rows that include movies from countries outside of the United States
-df = df[df['country'] == 'United States']
-df
-df.to_csv('data.csv', index=False)
-
-# %%
 #define external stylesheet
 external_stylesheets = ['https://bootswatch.com/5/quartz/bootstrap.css', '/Users/ciarafasullo/Desktop/DS4003/APP/assets/app_style.css']
 
