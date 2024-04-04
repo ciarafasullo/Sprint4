@@ -6,7 +6,7 @@ from dash import dcc, html, Input, Output
 
 # %%
 #read the data from the csv file
-df = pd.read_csv('filmtv_data.csv')
+df = pd.read_csv('data.csv') #read cleaned file (original too large to render)
 
 # %%
 #data cleaning
